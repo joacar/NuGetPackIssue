@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <RootNamespace>NuGetHell</RootNamespace>
+    <Nullable>enable</Nullable>
+    <NullableReferenceTypes>true</NullableReferenceTypes>
+    <LangVersion>latest</LangVersion>
+    <RepoRoot Condition="'$(RepoRoot)' == ''">$(MSBuildStartupDirectory)</RepoRoot>
+    <ArtifactsDir>$(MSBuildStartupDirectory)/artifacts</ArtifactsDir>
+  </PropertyGroup>
+
+  <!--<PropertyGroup>
+    <BaseIntermediateOutputPath>$(ArtifactsDir)/build/$(MSBuildProjectName)/obj/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(ArtifactsDir)/build/$(MSBuildProjectName)/bin/</BaseOutputPath>
+  </PropertyGroup>-->
+
+  <PropertyGroup Label="Versioning">
+    <MinVerMinimumMajorMinor>1.0</MinVerMinimumMajorMinor>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package information">
+    <Authors>Joakim Carselind</Authors>
+    <Copyright>Joakim Carselind (C) 2020</Copyright>
+    <Description>NuGet</Description>
+    <PackageTags>nuget;azdo;pack</PackageTags>
+    <PackageOutputPath Condition="'$(PackageOutputPath)' == ''">$(ArtifactsDir)/nuget</PackageOutputPath>
+  </PropertyGroup>
+
+  <Import Project="SourceLink.targets" Condition="'$(CI)' == 'true' AND '$(IsPackable)' == 'true'" />
+
+</Project>
