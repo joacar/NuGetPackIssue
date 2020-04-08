@@ -1,0 +1,30 @@
+trigger:
+  branches:
+    include:
+      - '*'
+
+variables:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+  ci: true
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+jobs:
+- job: 'Build project A'
+  steps:
+  - template: .azure/build.yaml
+    parameters:
+      projectName: A
+  - template: .azure/publish.yaml
+    parameters:
+      projectName: A
+
+- job: 'Build project B'
+  steps:
+  - template: .azure/build.yaml
+    parameters:
+      projectName: B
+  - template: .azure/publish.yaml
+    parameters:
+      projectName: B
