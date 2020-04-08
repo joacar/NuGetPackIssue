@@ -13,18 +13,18 @@ variables:
 jobs:
 - job: 'Build project A'
   steps:
-  - template: .azure/build.yaml
+  - template: .azure/build.yml
     parameters:
       projectName: A
-  - template: .azure/publish.yaml
+  - template: .azure/publish.yml
     parameters:
       projectName: A
 
 - job: 'Build project B'
   steps:
-  - template: .azure/build.yaml
+  - template: .azure/build.yml
     parameters:
       projectName: B
-  - template: .azure/publish.yaml
+  - template: .azure/publish.yml
     parameters:
       projectName: B
