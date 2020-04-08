@@ -1,9 +1,0 @@
-C:\Temp\NuGetHell\A\bin\Debug\netstandard2.0\A.deps.json
-C:\Temp\NuGetHell\A\bin\Debug\netstandard2.0\A.dll
-C:\Temp\NuGetHell\A\bin\Debug\netstandard2.0\A.pdb
-C:\Temp\NuGetHell\A\obj\Debug\netstandard2.0\A.csprojAssemblyReference.cache
-C:\Temp\NuGetHell\A\obj\Debug\netstandard2.0\A.AssemblyInfoInputs.cache
-C:\Temp\NuGetHell\A\obj\Debug\netstandard2.0\A.AssemblyInfo.cs
-C:\Temp\NuGetHell\A\obj\Debug\netstandard2.0\A.csproj.CoreCompileInputs.cache
-C:\Temp\NuGetHell\A\obj\Debug\netstandard2.0\A.dll
-C:\Temp\NuGetHell\A\obj\Debug\netstandard2.0\A.pdb
