@@ -11,7 +11,7 @@ variables:
   buildConfiguration: 'Release'
 
 jobs:
-- job: 'Build project A'
+- job: Build_project_A
   steps:
   - template: .azure/build.yml
     parameters:
@@ -20,7 +20,7 @@ jobs:
     parameters:
       projectName: A
 
-- job: 'Build project B'
+- job: Build_project_B
   steps:
   - template: .azure/build.yml
     parameters:
