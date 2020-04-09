@@ -11,14 +11,14 @@ variables:
   buildConfiguration: 'Release'
 
 jobs:
-- job: Build_project_A
-  steps:
-  - template: .azure/build.yml
-    parameters:
-      projectName: A
-  - template: .azure/publish.yml
-    parameters:
-      projectName: A
+# - job: Build_project_A
+#   steps:
+#   - template: .azure/build.yml
+#     parameters:
+#       projectName: A
+#   - template: .azure/publish.yml
+#     parameters:
+#       projectName: A
 
 - job: Build_project_B
   steps:
