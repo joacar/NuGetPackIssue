@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,8 +6,19 @@
     <MinVerTagPrefix>b-</MinVerTagPrefix>
   </PropertyGroup>
 
-  <ItemGroup>
+  <PropertyGroup>
+    <RestoreSources>
+      $(RestoreSources);
+      $(ArtifactsDir)/nuget
+    </RestoreSources>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
     <ProjectReference Include="..\A\A.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(Configuration)' != 'Debug'">
+    <PackageReference Include="A" Version="1.0.0-alpha" />
   </ItemGroup>
 
 </Project>
