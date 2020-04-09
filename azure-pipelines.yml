@@ -10,6 +10,7 @@ variables:
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
   repoRoot: $(Build.SourcesDirectory)
+  artifactsDir: $(repoRoot)/artifacts
 
 jobs:
 # - job: Build_project_A
