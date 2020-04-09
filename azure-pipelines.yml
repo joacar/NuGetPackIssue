@@ -9,6 +9,7 @@ variables:
   ci: true
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  repoRoot: $(Build.SourcesDirectory)
 
 jobs:
 # - job: Build_project_A
